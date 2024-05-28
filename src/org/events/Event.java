@@ -69,6 +69,10 @@ public class Event {
         return bookedSeats;
     }
 
+    public int getAvailableSeats() {
+        return totalSeats - bookedSeats;
+    }
+
     // Other methods
     @Override
     public String toString() {
@@ -87,7 +91,7 @@ public class Event {
         }
 
         if (bookedSeats + seats > totalSeats){
-            throw new IllegalArgumentException("Not enough available seats");
+            throw new IllegalArgumentException("Not enough seats. Available seats: " + getAvailableSeats());
         }
         bookedSeats += seats;
     }
