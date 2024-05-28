@@ -7,10 +7,10 @@ import java.util.Locale;
 public class Event {
 
     // ATTRIBUTES
-    private String title;
-    private LocalDate date;
-    private int totalSeats;
-    private int bookedSeats;
+    protected String title;
+    protected LocalDate date;
+    protected int totalSeats;
+    protected int bookedSeats;
 
     // CONSTRUCTORS
     public Event(String title, LocalDate date, int totalSeats) {
